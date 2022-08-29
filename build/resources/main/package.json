@@ -1,0 +1,71 @@
+{
+    "name": "Number_Uts",
+    "label": "Number_Uts",
+    "description": "",
+    "group": "com.automationanywhere",
+    "artifactName": "Number_Uts",
+    "packageVersion": "1.0-20220406-163741",
+    "codeVersion": "1.0-20220406-163741",
+    "author": "",
+    "commands": [
+        {
+            "name": "GetIntPart",
+            "label": "GetIntPart",
+            "description": "Get the Integer part of a number",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.GetIntPartCommand",
+            "icon": "pkg.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "number",
+                    "label": "Number",
+                    "description": "the value that will be used to extract the Int part",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "TruncateNumber",
+            "label": "TruncateNumber",
+            "description": "Get the Integer part of a number",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.TruncateNumberCommand",
+            "icon": "pkg.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "number",
+                    "label": "Number",
+                    "description": "The value that will be used to truncate",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "decimalPlaces",
+                    "label": "DecimalPlaces",
+                    "description": "The number of decimal places to keep",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
