@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "Number_Uts",
-    "packageVersion": "1.0-20220406-163741",
-    "codeVersion": "1.0-20220406-163741",
+    "packageVersion": "1.1-20240214-164515",
+    "codeVersion": "1.1-20240214-164515",
     "author": "",
     "commands": [
         {
@@ -23,7 +23,7 @@
                     "name": "number",
                     "label": "Number",
                     "description": "the value that will be used to extract the Int part",
-                    "type": "TEXT",
+                    "type": "NUMBER",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
@@ -47,7 +47,7 @@
                     "name": "number",
                     "label": "Number",
                     "description": "The value that will be used to truncate",
-                    "type": "TEXT",
+                    "type": "NUMBER",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
@@ -58,7 +58,7 @@
                     "name": "decimalPlaces",
                     "label": "DecimalPlaces",
                     "description": "The number of decimal places to keep",
-                    "type": "TEXT",
+                    "type": "NUMBER",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"

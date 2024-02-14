@@ -3,6 +3,9 @@ package com.automationanywhere.botcommand.samples.commands.basic;
 import com.automationanywhere.botcommand.data.impl.NumberValue;
 import com.automationanywhere.commandsdk.annotations.*;
 import com.automationanywhere.commandsdk.annotations.rules.NotEmpty;
+import com.automationanywhere.commandsdk.model.AttributeType;
+import com.automationanywhere.commandsdk.model.DataType;
+
 import static com.automationanywhere.commandsdk.model.AttributeType.TEXT;
 import static com.automationanywhere.commandsdk.model.DataType.*;
 
@@ -22,7 +25,7 @@ public class GetIntPart {
 
     @Execute
     public NumberValue action(
-            @Idx(index = "1", type = TEXT)
+            @Idx(index = "1", type = AttributeType.NUMBER)
             @Pkg(label = "Number",description = "the value that will be used to extract the Int part")
             @NotEmpty
                     Double number

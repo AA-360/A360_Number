@@ -3,6 +3,7 @@ package com.automationanywhere.botcommand.samples.commands.basic;
 import com.automationanywhere.botcommand.data.impl.NumberValue;
 import com.automationanywhere.commandsdk.annotations.*;
 import com.automationanywhere.commandsdk.annotations.rules.NotEmpty;
+import com.automationanywhere.commandsdk.model.AttributeType;
 
 import java.math.BigDecimal;
 
@@ -26,11 +27,11 @@ public class TruncateNumber {
 
     @Execute
     public NumberValue action(
-            @Idx(index = "1", type = TEXT)
+            @Idx(index = "1", type = AttributeType.NUMBER)
             @Pkg(label = "Number",description = "The value that will be used to truncate")
             @NotEmpty
                     Double number,
-            @Idx(index = "2", type = TEXT)
+            @Idx(index = "2", type = AttributeType.NUMBER)
             @Pkg(label = "DecimalPlaces",description = "The number of decimal places to keep")
             @NotEmpty
                     Double decimalPlaces
