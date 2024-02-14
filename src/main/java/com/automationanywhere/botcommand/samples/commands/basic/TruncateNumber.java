@@ -41,7 +41,7 @@ public class TruncateNumber {
        return new NumberValue(truncateDecimal(number,decimalPlaces.intValue()));
     }
 
-    private static BigDecimal truncateDecimal(double x, int numberofDecimals)
+    private static BigDecimal truncateDecimal(Double x, int numberofDecimals)
     {
         if ( x > 0) {
             return new BigDecimal(String.valueOf(x)).setScale(numberofDecimals, BigDecimal.ROUND_FLOOR);

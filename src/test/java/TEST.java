@@ -1,5 +1,8 @@
+import com.automationanywhere.botcommand.data.impl.NumberValue;
 import com.automationanywhere.botcommand.samples.commands.basic.GetIntPart;
+import com.automationanywhere.botcommand.samples.commands.basic.Round;
 import com.automationanywhere.botcommand.samples.commands.basic.TruncateNumber;
+import com.sun.jdi.DoubleValue;
 import org.testng.annotations.Test;
 
 import javax.crypto.Mac;
@@ -11,6 +14,7 @@ public class TEST {
     public void testEncode(){
         GetIntPart a = new GetIntPart();
         TruncateNumber b = new TruncateNumber();
+        Round c = new Round();
 
         //alert(a.action(1.324).toString());
         //alert(b.action(1.324,2.0).toString());
@@ -18,8 +22,12 @@ public class TEST {
         //System.out.println(truncateDecimal(1.23,2));
         //BigDecimal c =  new BigDecimal(String.valueOf(1.26)).setScale(3, BigDecimal.ROUND_CEILING);
         BigDecimal d = new BigDecimal(123.13698);
-        BigDecimal roundOff = d.setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        BigDecimal roundOff = d.setScale(0, BigDecimal.ROUND_CEILING);
         System.out.println(roundOff);
+
+        NumberValue dv = c.action(132.12547,2.0,"f");
+
+        int dd  =1;
 
     }
 

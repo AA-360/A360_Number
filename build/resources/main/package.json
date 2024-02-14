@@ -4,8 +4,8 @@
     "description": "",
     "group": "com.automationanywhere",
     "artifactName": "Number_Uts",
-    "packageVersion": "1.1-20240214-164515",
-    "codeVersion": "1.1-20240214-164515",
+    "packageVersion": "1.2-20240214-170542",
+    "codeVersion": "1.2-20240214-170542",
     "author": "",
     "commands": [
         {
@@ -27,6 +27,64 @@
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Round",
+            "label": "Round",
+            "description": "Rounds a number",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.RoundCommand",
+            "icon": "pkg.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "number",
+                    "label": "Number",
+                    "description": "the value that will be used to round",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "decimal_places",
+                    "label": "Decimal places",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "mode",
+                    "label": "Round mode",
+                    "type": "SELECT",
+                    "defaultValue": {
+                        "string": "f",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "Floor",
+                            "value": "f"
+                        },
+                        {
+                            "label": "Ceiling",
+                            "value": "c"
                         }
                     ]
                 }
